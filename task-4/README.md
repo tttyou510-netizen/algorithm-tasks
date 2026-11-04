@@ -7,7 +7,7 @@ Given an $M \times N$ 2D grid representing a map of `1`s (land) and `0`s (water)
 
 ### Key Features:
 - **Graph Traversal & Flood Fill**:
-  - **BFS Flood Fill**: Queue-based (`collections.deque`) exploration exploring level-by-level.
+  - **BFS Flood Fill**: Queue-based (`collections.deque`) exploration level-by-level.
   - **DFS Flood Fill**: Implemented both iteratively (using an explicit stack to prevent recursion overflow on large grids) and recursively.
 - **Connected Component Analysis**:
   - **Labeling Matrix**: Marks each distinct island with a unique ID ($1, 2, \dots, K$).
@@ -17,9 +17,6 @@ Given an $M \times N$ 2D grid representing a map of `1`s (land) and `0`s (water)
   - 8-way connectivity (including diagonals).
 - **NumPy Integration**:
   - Efficient boolean masking, matrix manipulation, and grid generation.
-- **Empirical Visualizations**:
-  - Visual grid plots with categorical colormaps.
-  - Benchmark comparing BFS vs DFS across grid sizes from $20 \times 20$ to $400 \times 400$.
 
 ---
 
@@ -36,30 +33,14 @@ Every cell is examined and visited at most once, guaranteeing linear runtime pro
 ---
 
 ## File Structure
-- `island_counter.py`: Core algorithm implementation and `IslandCounter` class.
-- `visualize.py`: Script to generate plots and run performance benchmarks.
-- `test_island_counter.py`: Unit test suite covering edge cases, connectivity modes, and BFS/DFS consistency.
-- `plots/`:
-  - `islands_visualization.png`: Visual comparison of raw grid, colored labeled islands, and area distribution.
-  - `flood_fill_benchmark.png`: Execution time scaling comparison between BFS and DFS.
+- `island_counter.py`: Core algorithm implementation, `IslandCounter` class, and executable simulation.
 
 ---
 
 ## How to Run
 
-### 1. Run Core Island Counter Demo
 ```bash
 python island_counter.py
-```
-
-### 2. Run Visualizer & Performance Benchmarking
-```bash
-python visualize.py
-```
-
-### 3. Run Unit Tests
-```bash
-python test_island_counter.py
 ```
 
 ---
